@@ -1,5 +1,8 @@
 package model;
 
+import java.util.List;
+import java.util.UUID;
+
 public final class User {
     private String id;
     private String firstName;
@@ -7,6 +10,7 @@ public final class User {
     private int age;
     private String workplace;
     private String city;
+    private List<String> accounts;
 
     public User(String id, String firstName, String lastName, int age, String workplace, String city) {
         this.id = id;
@@ -15,6 +19,7 @@ public final class User {
         this.age = age;
         this.workplace = workplace;
         this.city = city;
+        this.id = UUID.randomUUID().toString();
     }
 
     public User(String firstName, String lastName, Integer age, String workplace, String city) {
